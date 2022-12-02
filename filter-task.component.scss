@@ -1,0 +1,64 @@
+.allPositionsFilter { /*задаём расположение всех блоков по центру*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.secondBlock {
+  width: 1280px;
+  padding: 15px; /* Поля */
+  background: #AFEEEE	; /* Цвет фона */
+  border: 0px solid #150472; /* Параметры рамки */
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.leftSecondBlock {
+  display: flex;
+  flex-direction: column;
+}
+.leftSecondBlock1 {
+  display: inline-flex;
+  align-items: center;
+  width: 450px;
+  height: 80px;
+  justify-content: space-evenly;
+}
+.leftSecondBlock2 {
+  width: 450px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.rightSecondBlock {
+  display: flex;
+  flex-direction: column;
+}
+.rightSecondBlock1{
+  width: 600px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+.rightSecondBlock2{
+  width: 600px;
+  height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.thirdBlock {
+  width: 1280px;
+  padding: 15px; /* Поля */
+  background: #AFEEEE; /* Цвет фона */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.centerThirdBlock{
+  display: inline-flex;
+  width: 1000px;
+}

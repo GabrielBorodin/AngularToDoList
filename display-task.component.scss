@@ -1,0 +1,66 @@
+.allPositionsDisplay { /*задаём расположение всех блоков по центру*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.finalBlock {
+  border: 1px solid black; /* Параметры рамки */
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  height: 200px;
+}
+.categoriesImportant {
+  border: 1px solid black; /* Параметры рамки */
+  display: flex;
+  width: 180px;
+  height: 200px;
+  justify-content: center;
+}
+.gradationImportant{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: 25px;
+}
+.finalBlock {
+  margin-bottom: 40px;
+}
+.toDoBlock {
+  border: 1px solid black; /* Параметры рамки */
+  padding: 30px 30px 10px 30px; /* Поля */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 1180px;
+  height: 160px;
+}
+.toDoText {
+  font-size: 25px;
+}
+
+.rightButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonYes {
+  margin-bottom: 40px;
+}
+.buttonNo {
+  margin-bottom: 40px;
+}
+.greenYes {
+  background: #32CD32;
+  width: 1300px;
+  height: 200px;
+  border: 2px solid; /* Параметры рамки */
+  margin-bottom: 50px;
+}
+.redNo {
+  background: #CD5C5C;
+  width: 1300px;
+  height: 200px;
+  border: 2px solid;
+  margin-bottom: 50px;
+}

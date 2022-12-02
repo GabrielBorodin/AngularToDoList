@@ -1,0 +1,29 @@
+<li *ngFor="let itemTask of (toDoFilterArray ? toDoFilterArray : toDoArray)">
+  <div class="allPositionsDisplay">
+    <div [ngClass]="itemTask.status === 3 ? {greenYes: true} : itemTask.status === 1 ? {redNo: true} : '2' ">
+      <div class="finalBlock" id="finalBlock">
+        <div class="categoriesImportant">
+          <div class="gradationImportant"
+               id="gradationImportant">{{itemTask.priority === 1 ? 'Высокий' : itemTask.priority === 2 ? 'Средний' : 'Низкий'}}</div>
+        </div>
+        <div class="toDoBlock" id="colorCondition">
+          <div class="toDoText" style="width:800px; height:90px;" id="display1">{{itemTask.text}}</div>
+          <div class="time">
+            <p id="display"> {{itemTask.time}} </p>
+          </div>
+          <div class="rightButtons">
+            <div class="buttonYes">
+              <button id="changeColorYes" (click)="changeColor(itemTask, 'changeColorYes')">&#10004;</button>
+            </div>
+            <div class="buttonNo">
+              <button id="changeColorNo" (click)="changeColor(itemTask, 'changeColorNo')">&#10006;</button>
+            </div>
+            <div class="buttonDelete">
+              <button (click)="deleteTask(itemTask)">&#x1f5d1;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

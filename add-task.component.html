@@ -1,0 +1,20 @@
+<div class="allPositionsAdd" onLoad="getTask()">
+<div class="firstBlock">
+  <div class="leftFirstBlock">
+    <h2>Приоритет:</h2>
+    <select id="leftFirstBlock" name="leftFirstBlock" [(ngModel)]="priority">
+      <option disabled>Приоритет</option>
+      <option id="priorityHigh" value="Высокий">Высокий</option>
+      <option id="priorityMedium" value="Средний">Средний</option>
+      <option id="priorityLow" value="Низкий">Низкий</option>
+    </select>
+  </div>
+  <div class="centerFirstBlock">
+    <h2 class="left">Текст задачи:</h2>
+    <input type="text" placeholder = "Введите текст..." id="makeNewTask" [(ngModel)]="value">
+  </div>
+  <div class="rightFirstBlock">
+    <button id="sendNewObjective" (click)="sendNewObjective()" >Добавить задачу</button>
+  </div>
+</div>
+</div>

@@ -1,0 +1,76 @@
+<div class="allPositionsFilter" xmlns="http://www.w3.org/1999/html">
+  <div class="secondBlock">
+    <div class="leftSecondBlock">
+      <div class="leftSecondBlock1">
+        <h3>Фильтр по приоритету:</h3>
+
+        <form [formGroup]="form">
+          <select style="width: 150px; height: 30px" formControlName="fPriority" id="filterPriority">
+            <option *ngFor="let fPriority of fPriorities" [ngValue]="fPriority">
+              {{fPriority.name}}
+            </option>
+          </select>
+        </form>
+
+      </div>
+      <div class="leftSecondBlock2">
+        <h3>Сортировка по дате:</h3>
+
+        <form [formGroup]="form">
+          <select style="width: 150px; height: 30px" formControlName="date" id="sortDate">
+            <option *ngFor="let date of dates" [ngValue]="date">
+              {{date.name}}
+            </option>
+          </select>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="rightSecondBlock">
+      <div class="rightSecondBlock1">
+        <h3>Фильтр по статусу:</h3>
+
+        <section>
+          <form [formGroup]="form" novalidate>
+            <div *ngFor="let data of Data; let i = index">
+              <label>
+                <input type="checkbox" id="activeStatus" [value]="data.id" (change)="onCheckboxChange($event)"/>
+                {{data.name}}
+              </label>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div class="rightSecondBlock2">
+        <h3>Сортировка по приоритету:</h3>
+
+        <form [formGroup]="form">
+          <select style="width: 150px; height: 30px" id="sortPriority" formControlName="sPriority">
+            <option *ngFor="let sPriority of sPriorities" [ngValue]="sPriority">
+              {{sPriority.name}}
+            </option>
+          </select>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="thirdBlock">
+    <h3>Поиск задачи по тексту:</h3>
+    <form [formGroup]="testForm">
+      <div class="centerThirdBlock">
+        <input type="text" style="width: 1200px; height: 30px" placeholder="Начните вводить текст задачи..." size="70"
+               id="searchTaskWithText" formControlName="enteredText">
+      </div>
+    </form>
+  </div>
+
+  <!--  {{filterArray | json}}
+    {{filterPriority | json}}
+    {{checkArrays | json}}-->
+
+  <div id="newBlocks" class="newBlocks"></div>
+
+</div>
